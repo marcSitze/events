@@ -1,0 +1,156 @@
+body  {
+  background-color: #DDA0DD;
+}
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.link {
+  color: #fff !important;
+}
+input[type=submit] {
+  width: 100%;
+  background-color: #BA55D3;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #DDA0DD;
+}
+.auth-block {
+  margin-top: 30px;
+  height: 90vh;
+  text-align: center;
+}
+.left-block {
+  background-color: #BA55D3;
+  height: 100%;
+}
+.right-block {
+  background-color: #fff;
+  height: 100%;
+}
+.create-account {
+  color: #BA55D3;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 15px 25px;
+  font-weight: bold;
+  margin: 20px;
+  text-decoration: none !important;
+}
+.dashboard {
+  background-color: #BA55D3;
+  height: 90vh;
+  width: 100%;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+.event {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0 20px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.event h3 {
+  font-weight: bold;
+}
+.event button {
+  align-self: flex-end;
+  background-color: #BA55D3;
+  color: rgb(107, 59, 59);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  margin-top: -10px;
+  margin-bottom: 5px;
+  transition: all 0.2s;
+}
+.event button:hover {
+  background-color: #DDA0DD;
+  color: #BA55D3;
+}
+.heading {
+  color: #fff;
+  font-weight: bold;
+}
+.top-links {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+}
+.nav-right {
+  display: flex;
+  flex-direction: row;
+}
+@media(max-width: 780px) {
+  .nav-right {
+    display: flex;
+    flex-direction: column;
+  }
+  .btn-nav:nth-child(1) {
+    align-self: flex-start;
+  }
+}
+.py-2 {
+  margin-bottom: 20px !important;
+}
+.top-links button {
+  color: #BA55D3;
+  font-weight: bold;
+}
+.btn-nav {
+  background-color: #f6e8fa;
+  color: #BA55D3;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  margin-top: -10px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  transition: all 0.2s;
+}
+.btn-nav:hover {
+  background-color: #e0bee0;
+  color: #BA55D3;
+}
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.register-block {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.overflow-scroll {
+  overflow: scroll;
+  height: 60vh;
+}
+.delete {
+  margin-top: 10px;
+  background-color: #fff !important;
+  color: #BA55D3 !important;
+  border: 1px solid #BA55D3 !important;
+  transition: all 0.2s;
+}
+.delete:hover {
+  background-color: #BA55D3 !important;
+  color: #fff !important;
+}
