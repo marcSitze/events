@@ -81,7 +81,7 @@ module.exports = {
        const participant = event.participants.find(participant => participant.participant._id == user);
 
        if(participant) {
-           return res.status(400).json({ "msg": "participant already registered to this event" });
+           return res.status(400).json({ "error": "participant already registered to this event" });
        }
         try {
             const update = {
@@ -95,7 +95,7 @@ module.exports = {
             res.status(200).json({ event, "msg": "Event updated" });
         } catch (err) {
             console.log(err);
-            res.status(500).json({ "msg": "Server error", error });
+            res.status(500).json({ "error": "Server error", error });
         }
        
     }

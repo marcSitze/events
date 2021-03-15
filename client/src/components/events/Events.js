@@ -17,7 +17,7 @@ function Events() {
     },[]);
 
     socket.on("getEvents", data => {
-        console.log(data);
+        // console.log(data);
         setEvents(data);
     });
 
