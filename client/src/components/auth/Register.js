@@ -20,7 +20,7 @@ function Register() {
     const handleSubmit = e => {
         e.preventDefault();
         register(values).then(data => {
-            console.log(data);
+            // console.log(data);
             setErrors(data.data);
             authenticate(data.token, () => {
                 setValues({...values, redirectToReferer: true });

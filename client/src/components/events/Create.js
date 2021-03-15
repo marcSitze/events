@@ -14,6 +14,7 @@ function Create() {
     });
 
     const [errors, setErrors] = useState([]);
+    const [success, setSuccess] = useState(false);
     const { name, description, adress, date } = values;
 
     const handleChange = e => {
@@ -28,12 +29,15 @@ function Create() {
             } else {
                 setErrors([]);
                 socket.emit('newEvent', data.event);
-                return <Redirect to="/myevents" />
+                setSuccess(true);
             }
         }).catch(err => console.error('THere was an error' + err));
     }
     if(!isAuthenticated()) {
         return <Redirect to="/login" />
+    }
+    if(success){
+        return <Redirect to="/myevents" /> 
     }
     return (
         <div className="row auth-block">

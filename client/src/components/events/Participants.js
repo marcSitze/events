@@ -7,16 +7,20 @@ import socket from '../../socketClient';
 function Participants(props) {
     const [event, setEvent] = useState({});
     const eventId = props.match.params.id;
+    
+    socket.on('participate', data => {
+        console.log(data);
+        setEvent(data);
+    });
 
     useEffect(() => {
-        socket.on('participate', data => {
-            setEvent(data);
-        });
         getParticipants(eventId)
         .then(data => {
             setEvent(data.event);
         })
         .catch(err => console.log(err));
+
+
     }, [eventId]);
 
    return (
