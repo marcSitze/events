@@ -1,5 +1,3 @@
-// const { io, server } = require('../server'); 
-// const { io } = require('../server');
 const User = require('../models/User');
 const Event = require('../models/Event');
 const jwt = require('jsonwebtoken');
