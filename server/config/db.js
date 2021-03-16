@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 const config = require('./default');
-console.log(config.DATABASE_URL)
+// console.log(config.DATABASE_URL)
 const ConnectDB = () => {
     try {
-      mongoose.connect(config.DATABASE_URL, {
+      mongoose.connect(config.ATLAS_URI, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useFindAndModify: false
