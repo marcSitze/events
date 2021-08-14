@@ -27,20 +27,20 @@ function Events() {
 
    return (
         <div className="container overflow-scroll">
-         {events.map(event => (
+         {events ? events.map(event => (
              <div className="col-md-6" key={event._id}>
              <div className="event">
                  <h3>{event.name}</h3>
                  <p>{event.description}</p>
                  <p>{event.adress}</p>
-                 <p>Organisateur : {event.user.name}</p>
+                 <p>Organisateur : {event.user ? event.user.name: ''}</p>
                  <p>{event.date}</p>
                  <div className="btn-container">
                      <button className="participate"><Link className="link" to={`/events/${event._id}`}>Participate</Link></button> 
                  </div>
              </div>
          </div>
-         ))}
+         )): null}
         </div>
     )
 }
